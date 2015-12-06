@@ -1,0 +1,225 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta charset="utf-8">
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<link type='text/css' rel='stylesheet' href='styles/bootstrap.min.css'>
+		<link type='text/css' rel='stylesheet' href='styles/main.css'>
+		<link rel="stylesheet" href="styles/font-awesome.min.css" />
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script type='text/javascript' src='scripts/bootstrap.min.js'></script>
+		<script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
+		<script src="scripts/main.js"></script>
+		<title>Zoom Trackr</title>
+	</head>
+	<body>
+		<div class="row header">
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<figure class="zoom-logo">
+					<img src="images/logo.png" alt="">
+				</figure>
+				<h4 class="logo-trk">Trackr</h4>
+				<i class="fa fa-minus"></i>
+				<span class="trk-text">live Tracking made easy!</span>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="top-box">
+					<span class="amnt">API Hits:</span>
+					<span class="value" id="api-hits">748</span>
+					<span class="divider">|</span>
+					<span class="amnt">Total Parcels:</span>
+					<span class="value" id="totalCnt">09</span>
+				</div>
+			</div>
+		</div>
+		<div class="row body">
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 right-border">
+				<div class="input-search" >
+					<i class="fa fa-search"></i>
+					<input type="text" placeholder="Search (by parcel name, price, weight)" id="filter">
+				</div>
+				<ul class="item-list">
+					<li class="clearfix">
+						<div class="left-items">
+							<i class="fa fa-yelp"></i>
+							<h4 class="item-name">Airwick Aroma Oil</h4>
+						</div>
+						<div class="right-items">
+							<i class="fa fa-rupee"></i>
+							<h5 class="item-amnt">274</h5>
+							<i class="fa fa-chevron-circle-down"></i>
+							<i class="fa fa-chevron-circle-right disp-none"></i>
+						</div>
+					</li>
+					<li class="clearfix">
+						<div class="left-items">
+							<i class="fa fa-yelp"></i>
+							<h4 class="item-name">Sony DSC-RX 10</h4>
+						</div>
+						<div class="right-items">
+							<i class="fa fa-rupee"></i>
+							<h5 class="item-amnt">63,234</h5>
+							<i class="fa fa-chevron-circle-down"></i>
+							<i class="fa fa-chevron-circle-right disp-none"></i>
+						</div>
+					</li>
+					<li class="clearfix">
+						<div class="left-items">
+							<i class="fa fa-yelp"></i>
+							<h4 class="item-name">Vegetable Chopper</h4>
+						</div>
+						<div class="right-items">
+							<i class="fa fa-rupee"></i>
+							<h5 class="item-amnt">250</h5>
+							<i class="fa fa-chevron-circle-down"></i>
+							<i class="fa fa-chevron-circle-right disp-none"></i>
+						</div>
+					</li>
+					<li class="clearfix">
+						<div class="left-items">
+							<i class="fa fa-yelp"></i>
+							<h4 class="item-name">HP 15-ac053TX Laptop</h4>
+						</div>
+						<div class="right-items">
+							<i class="fa fa-rupee"></i>
+							<h5 class="item-amnt">45,314</h5>
+							<i class="fa fa-chevron-circle-down"></i>
+							<i class="fa fa-chevron-circle-right disp-none"></i>
+						</div>
+					</li>
+					<li class="clearfix">
+						<div class="left-items">
+							<i class="fa fa-yelp"></i>
+							<h4 class="item-name">Apple Mac Mini MGEQ2HN/A</h4>
+						</div>
+						<div class="right-items">
+							<i class="fa fa-rupee"></i>
+							<h5 class="item-amnt">68,900</h5>
+							<i class="fa fa-chevron-circle-down"></i>
+							<i class="fa fa-chevron-circle-right disp-none"></i>
+						</div>
+					</li>
+					<li class="clearfix">
+						<div class="left-items">
+							<i class="fa fa-yelp"></i>
+							<h4 class="item-name">Dell U2414H 24" Monitor</h4>
+						</div>
+						<div class="right-items">
+							<i class="fa fa-rupee"></i>
+							<h5 class="item-amnt">18,950</h5>
+							<i class="fa fa-chevron-circle-down"></i>
+							<i class="fa fa-chevron-circle-right disp-none"></i>
+						</div>
+					</li>
+					<li class="clearfix">
+						<div class="left-items">
+							<i class="fa fa-yelp"></i>
+							<h4 class="item-name">TRESemme Shampoo</h4>
+						</div>
+						<div class="right-items">
+							<i class="fa fa-rupee"></i>
+							<h5 class="item-amnt">366</h5>
+							<i class="fa fa-chevron-circle-down"></i>
+							<i class="fa fa-chevron-circle-right disp-none"></i>
+						</div>
+					</li>
+					<li class="clearfix">
+						<div class="left-items">
+							<i class="fa fa-yelp"></i>
+							<h4 class="item-name">Lakme Eyeconic</h4>
+						</div>
+						<div class="right-items">
+							<i class="fa fa-rupee"></i>
+							<h5 class="item-amnt">430</h5>
+							<i class="fa fa-chevron-circle-down"></i>
+							<i class="fa fa-chevron-circle-right disp-none"></i>
+						</div>
+					</li>
+					<li class="clearfix">
+						<div class="left-items">
+							<i class="fa fa-yelp"></i>
+							<h4 class="item-name">Raspberry Pi 2 Mobile B</h4>
+						</div>
+						<div class="right-items">
+							<i class="fa fa-rupee"></i>
+							<h5 class="item-amnt">2,850</h5>
+							<i class="fa fa-chevron-circle-down"></i>
+							<i class="fa fa-chevron-circle-right disp-none"></i>
+						</div>
+					</li>
+				</ul>
+				<div>
+					<div class="sort-name">
+						
+						<h3>Sort By</h3>
+					</div>
+					<div class="sort-value">
+						<div>
+						
+							<h3>Value</h3>
+						</div>
+						<div>
+							
+							<h3>Weight</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 ">
+				<div class="right-side-items">
+					<div class="">
+						<div class="item-image">
+							<img alt="" id="image-of-obj" src="s">
+							<span>ETA</span>
+							<input type="text" class="eta">
+						</div>
+						<div class="selected-box">
+							<div class="item-hdr">Airwick Aroma Oil</div>
+							<ul class="right-list">
+								<li>
+									<i class="fa fa-"></i>
+									<span class="itm-cat">Household</span>
+								</li>
+								<li>
+									<i class="fa fa-"></i>
+									<span class="itm-price">274</span>
+								</li>
+								<li>
+									<i class="fa fa-database"></i>
+									<span class="itm-wt">0.6kg</span>
+								</li>
+								<li>
+									<i class="fa fa-"></i>
+									<span class="itm-qt">2</span>
+								</li>
+								<li>
+									<i class="fa fa-"></i>
+									<span class="itm-ph">9741912312</span>
+								</li>
+								<li>
+									<span class="itm-col"></span>
+									<span>Color</span>
+								</li>
+
+							</ul>
+						</div>
+						<div class="curr-loc">Current Location [Live Update]</div>
+					</div>
+					<div>
+						<span>Address:</span>
+						<input id="searchTextField" type="text" size="50">
+						<br>
+            			<span>latitude:</span>
+            			<input name="latitude" class="MapLat" id="maplat" type="text" placeholder="Latitude" style="width: 161px;">
+            			<span>longitude:</span>
+            			<input name="longitude" class="MapLon" type="text" id="maplon" placeholder="Longitude" style="width: 161px;">
+						<div id="map_canvas" style="height: 250px;width: 535px;margin: 0.6em;"></div>
+					</div>
+					<div class="like-btn btn">LIKE</div>
+					<div class="share-btn btn">SHARE</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
